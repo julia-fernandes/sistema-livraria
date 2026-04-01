@@ -32,6 +32,12 @@ public class LivroService {
         return repository.save(livro);
     }
 
+    public Livro atualizar(Long id, Livro livro){
+        buscarId(id); //verifica se o objeto existe
+        livro.setId(id); //modifica o objeto
+        return repository.save(livro);
+    }
+
     public void deletar(Long id){
         repository.deleteById(id);
     }
