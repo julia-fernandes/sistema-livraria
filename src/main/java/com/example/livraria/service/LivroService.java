@@ -24,7 +24,7 @@ public class LivroService {
          return repository.findByTituloContainingIgnoreCase(titulo);
     }
 
-    public Livro burcarId(Long id){
+    public Livro buscarId(Long id){
         return repository.findById(id).orElseThrow(() -> new RuntimeException("Livro não encontrado."));
     }
 
